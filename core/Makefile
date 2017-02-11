@@ -21,10 +21,10 @@ endif
 # The filter part means "only eval the copy-one-file rule if this
 # src:dest pair is the first one to match the same dest"
 #$(1): the src:dest pair
-define check-product-copy-files
-$(if $(filter %.apk, $(call word-colon, 2, $(1))),$(info \
-    Prebuilt apk found in PRODUCT_COPY_FILES: $(1), use BUILD_PREBUILT instead!))
-endef
+#>define check-product-copy-files
+#>$(if $(filter %.apk, $(call word-colon, 2, $(1))),$(info \
+#>    Prebuilt apk found in PRODUCT_COPY_FILES: $(1), use BUILD_PREBUILT instead!))
+#>endef
 # filter out the duplicate <source file>:<dest file> pairs.
 unique_product_copy_files_pairs :=
 $(foreach cf,$(PRODUCT_COPY_FILES), \
@@ -1314,14 +1314,14 @@ endef
 $(BUILT_SYSTEMIMAGE): $(FULL_SYSTEMIMAGE_DEPS) $(INSTALLED_FILES_FILE)
 	$(call build-systemimage-target,$@)
 
-#ifndef I_WANT_A_QUAIL_STAR
-#ifneq ($(WITHOUT_CHECK_API),true)
-#$(BUILT_SYSTEMIMAGE): checkapi
-#ifneq ($(TARGET_DISABLE_CMSDK),true)
-#$(BUILT_SYSTEMIMAGE): checkapi-cm
-#endif
-#endif
-#endif
+# ifndef I_WANT_A_QUAIL_STAR
+# ifneq ($(WITHOUT_CHECK_API),true)
+# $(BUILT_SYSTEMIMAGE): checkapi
+# ifneq ($(TARGET_DISABLE_CMSDK),true)
+# $(BUILT_SYSTEMIMAGE): checkapi-cm
+# endif
+# endif
+# endif
 
 INSTALLED_SYSTEMIMAGE := $(PRODUCT_OUT)/system.img
 SYSTEMIMAGE_SOURCE_DIR := $(TARGET_OUT)
