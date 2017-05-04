@@ -25,7 +25,6 @@ PRODUCT_PACKAGES += \
     BlockedNumberProvider \
     BookmarkProvider \
     Browser2 \
-    Calendar \
     CalendarProvider \
     CaptivePortalLogin \
     CertInstaller \
@@ -33,7 +32,6 @@ PRODUCT_PACKAGES += \
     DeskClock \
     DocumentsUI \
     DownloadProviderUi \
-    Email \
     ExactCalculator \
     Exchange2 \
     ExternalStorageProvider \
@@ -45,7 +43,6 @@ PRODUCT_PACKAGES += \
     ManagedProvisioning \
     MtpDocumentsProvider \
     PicoTts \
-    PacProcessor \
     libpac \
     PrintSpooler \
     PrintRecommendationService \
