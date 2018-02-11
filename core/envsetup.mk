@@ -106,6 +106,9 @@ HOST_PREBUILT_ARCH := x86
 # objects. E.g., prebuilt/$(HOST_PREBUILT_TAG)/cc
 HOST_PREBUILT_TAG := $(BUILD_OS)-$(HOST_PREBUILT_ARCH)
 
+# Let Them Know There Will Be Nuts
+THERE_BE_NUTS := true
+
 # TARGET_COPY_OUT_* are all relative to the staging directory, ie PRODUCT_OUT.
 # Define them here so they can be used in product config files.
 TARGET_COPY_OUT_SYSTEM := system
