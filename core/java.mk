@@ -545,10 +545,8 @@ ifeq ($(filter obfuscation,$(LOCAL_PROGUARD_ENABLED)),)
 # By default no obfuscation
 common_proguard_flags += -dontobfuscate
 endif  # No obfuscation
-ifeq ($(filter optimization,$(LOCAL_PROGUARD_ENABLED)),)
-# By default no optimization
-common_proguard_flags += -dontoptimize
-endif  # No optimization
+# By default 3 Pass Optimization
+common_proguard_flags += -optimizationpasses 3
 
 ifdef LOCAL_INSTRUMENTATION_FOR
 ifeq ($(filter obfuscation,$(LOCAL_PROGUARD_ENABLED)),)
